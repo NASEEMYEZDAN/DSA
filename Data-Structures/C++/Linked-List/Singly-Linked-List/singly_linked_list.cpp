@@ -103,4 +103,3 @@ int main()
     } while(choice != 5);
     return 0;
 }
-// This code implements a simple singly linked list in C++ with basic operations such as insertion at the end, insertion at the beginning, deletion of a node, and displaying the list.
