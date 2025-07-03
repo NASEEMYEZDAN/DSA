@@ -5,6 +5,8 @@ struct Node
     int data;
     Node* next;
 };
+
+
 Node* insertEnd(Node *head, int value)
 {
     Node *newNode= new Node;
@@ -16,10 +18,12 @@ Node* insertEnd(Node *head, int value)
     }
     Node *temp=head;
     while(temp->next!=nullptr)
-    temp=temp->next;
+        temp=temp->next;
     temp->next=newNode;
     return head;
 }
+
+
 Node *insertBegin(Node *head, int value)
 {
     Node *newNode = new Node;
@@ -27,6 +31,8 @@ Node *insertBegin(Node *head, int value)
     newNode->next = head;
     return newNode;
 }
+
+
 Node *deleteNode(Node *head, int value)
 {
     if(head==nullptr)
@@ -47,6 +53,8 @@ Node *deleteNode(Node *head, int value)
     delete toDelete;
     return head;
 }
+
+
 void displayList(Node *head)
 {
     if (head== nullptr)
@@ -61,6 +69,8 @@ void displayList(Node *head)
     }
     cout<< "Null\n";
 }
+
+
 int main()
 {
     Node *head=nullptr;
@@ -103,3 +113,4 @@ int main()
     } while(choice != 5);
     return 0;
 }
+
