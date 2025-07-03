@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cassert>
+#include <cstdio>
 using namespace std;
 
 // Forward declarations (should match your doubly_linked_list.cpp)
@@ -33,20 +34,20 @@ int main() {
     head = insertFront(head, 5);
 
     // Display list after insertions
-    cout << "List after insertions: " << listToString(head);
+    printf("List after insertions: %s", listToString(head).c_str());
 
     // Delete a value
     head = deleteNode(head, 20);
 
     // Display list after deletion
-    cout << "List after deleting 20: " << listToString(head);
+    printf("List after deleting 20: %s", listToString(head).c_str());
 
     // Delete all values
     head = deleteNode(head, 5);
     head = deleteNode(head, 10);
 
     // Display list after all deletions
-    cout << "List after deleting all: " << listToString(head);
+    printf("List after deleting all: %s", listToString(head).c_str());
 
     return 0;
 }

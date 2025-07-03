@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cstdio>
 using namespace std;
 
 struct Node {
@@ -29,7 +30,7 @@ Node* deleteNode(Node* head, int value) {
     while (temp && temp->data != value) temp = temp->next;
 
     if (!temp) {
-        cout << "Value not found.\n";
+        printf("Value not found.\n");
         return head;
     }
 
@@ -42,34 +43,34 @@ Node* deleteNode(Node* head, int value) {
         temp->next->prev = temp->prev;
 
     delete temp;
-    cout << "Deleted.\n";
+    printf("Deleted.\n");
     return head;
 }
 
 void displayForward(Node* head) {
     Node* temp = head;
-    cout << "Forward: ";
+    printf("Forward: ");
     while (temp) {
-        cout << temp->data << " ";
+        printf("%d ", temp->data);
         temp = temp->next;
     }
-    cout << endl;
+    printf("\n");
 }
 
 void displayBackward(Node* head) {
     if (!head) {
-        cout << "List is empty.\n";
+        printf("List is empty.\n");
         return;
     }
     Node* temp = head;
     while (temp->next) temp = temp->next;
 
-    cout << "Backward: ";
+    printf("Backward: ");
     while (temp) {
-        cout << temp->data << " ";
+        printf("%d ", temp->data);
         temp = temp->prev;
     }
-    cout << endl;
+    printf("\n");
 }
 
 /*int main() {
@@ -77,29 +78,29 @@ void displayBackward(Node* head) {
     int choice, value;
 
     while (true) {
-        cout << "\nMenu:\n";
-        cout << "1. Insert at front\n";
-        cout << "2. Insert at end\n";
-        cout << "3. Delete a node\n";
-        cout << "4. Display forward\n";
-        cout << "5. Display backward\n";
-        cout << "6. Exit\n";
-        cout << "Enter your choice: ";
+        printf("\nMenu:\n");
+        printf("1. Insert at front\n");
+        printf("2. Insert at end\n");
+        printf("3. Delete a node\n");
+        printf("4. Display forward\n");
+        printf("5. Display backward\n");
+        printf("6. Exit\n");
+        printf("Enter your choice: ");
         cin >> choice;
 
         switch (choice) {
             case 1:
-                cout << "Enter value to insert at front: ";
+                printf("Enter value to insert at front: ");
                 cin >> value;
                 head = insertFront(head, value);
                 break;
             case 2:
-                cout << "Enter value to insert at end: ";
+                printf("Enter value to insert at end: ");
                 cin >> value;
                 head = insertEnd(head, value);
                 break;
             case 3:
-                cout << "Enter value to delete: ";
+                printf("Enter value to delete: ");
                 cin >> value;
                 head = deleteNode(head, value);
                 break;
@@ -110,10 +111,10 @@ void displayBackward(Node* head) {
                 displayBackward(head);
                 break;
             case 6:
-                cout << "Exiting...\n";
+                printf("Exiting...\n");
                 return 0;
             default:
-                cout << "Invalid choice.\n";
+                printf("Invalid choice.\n");
         }
     }
 
