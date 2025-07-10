@@ -49,9 +49,9 @@ int main() {
     display(head);
 
     // Delete all values
-    head = deleteNode(head, 10);
-    head = deleteNode(head, 30);
-    head = deleteNode(head, -15);
+    head = deleteNode(head, -45);
+    head = deleteNode(head, -12);
+    head = deleteNode(head, 15);
 
     printf("After deleting all: ");
     display(head);

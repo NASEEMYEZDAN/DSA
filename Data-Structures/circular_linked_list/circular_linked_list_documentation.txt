@@ -1,0 +1,3 @@
+This code implements a circular linked list with basic operations.
+Each node contains an integer value and points to the next node, with the last node pointing back to the head, forming a circle.
+This circular structure allows efficient traversal and manipulation from any point in the list.
